@@ -1,0 +1,24 @@
+# this is a comment
+
+rclick 0,0
+click 0,0
+wait 2
+hover 100,0
+if (True)(log(true))(log(false))
+phold val = 5
+#log(val should be 5)
+waitfor (    movefile (non_exist)(nowhere)   )(1)(log(could not be moved))
+log(true and false =)
+log(boolean_operation (true and false))
+if (del(no_file))(log(file removed))(log(file not removed))
+if (look(100,100 255,255,255))(log(its white))(log(its not white))
+if (exists(/file/nothing))()(log(file isnt there))
+type (im typing stuff)
+log(plus(1 , 1))
+phold i = 0
+
+poshold loop1
+
+    phold i = plus(i,1)
+    log(i)
+    if (equal(i,10)) (log(finnished) | exit)(goto loop1)
